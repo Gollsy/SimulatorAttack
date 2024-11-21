@@ -6,7 +6,7 @@ from torchvision.datasets import CIFAR10, CIFAR100, MNIST, FashionMNIST, ImageFo
 from torchvision.transforms import transforms
 
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import glog as log
 import torch
 import torch.nn as nn

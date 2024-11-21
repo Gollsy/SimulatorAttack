@@ -1,7 +1,7 @@
 import argparse
 import os
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import numpy as np
 from torchvision import transforms
 from torchvision.datasets import CIFAR10, CIFAR100, MNIST, FashionMNIST, ImageFolder

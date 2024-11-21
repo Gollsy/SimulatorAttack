@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from SWITCH_attack.learning_ideal_surrogate.task_dataset import MetaTaskDataset
 from torch.utils.data import DataLoader
 from SWITCH_attack.learning_ideal_surrogate.meta_network import MetaNetwork

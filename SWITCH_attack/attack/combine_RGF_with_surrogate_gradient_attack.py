@@ -3,7 +3,7 @@ from collections import OrderedDict
 
 import random
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import os
 import glog as log
 import torch
@@ -627,7 +627,7 @@ if __name__ == "__main__":
     parser.add_argument("--surrogate_arch", type=str, default="resnet-110", help="The architecture of surrogate model,"
                                                                                  " in original paper it is resnet152")
     parser.add_argument('--json-config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/surrogate_gradient_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/surrogate_gradient_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--arch', default=None, type=str, help='network architecture')
     parser.add_argument('--test_archs', action="store_true")
@@ -640,7 +640,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
     print("using GPU {}".format(args.gpu))
     if "RGF" in args.est_method:
         if args.dataset == "ImageNet":

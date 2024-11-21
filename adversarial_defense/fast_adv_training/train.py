@@ -6,7 +6,7 @@ import os
 import sys
 import time
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import torch.nn as nn
 
 from config import PY_ROOT

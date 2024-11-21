@@ -1,7 +1,7 @@
 import sys
 
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from config import PY_ROOT
 import argparse
 import os

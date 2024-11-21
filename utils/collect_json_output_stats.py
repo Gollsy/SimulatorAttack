@@ -38,9 +38,9 @@ def get_file_name_list(dataset, norm, targeted):
 
     for method in ["SWITCH_neg"]:
         if method == "SWITCH_neg":
-            file_path = "/home1/machen/query_based_black_box_attack/logs/" + get_SWITCH_neg_dir_name(dataset, norm, targeted, "increment", False)
+            file_path = "/mnt/workspace/query_based_black_box_attack/logs/" + get_SWITCH_neg_dir_name(dataset, norm, targeted, "increment", False)
         elif method == "SWITCH_other":
-            file_path = "/home1/machen/query_based_black_box_attack/logs/" + get_SWITCH_rnd_dir_name(dataset, norm,
+            file_path = "/mnt/workspace/query_based_black_box_attack/logs/" + get_SWITCH_rnd_dir_name(dataset, norm,
                                                                                                      targeted,
                                                                                                      "increment", False)
         assert os.path.exists(file_path), "{} does not exist".format(file_path)

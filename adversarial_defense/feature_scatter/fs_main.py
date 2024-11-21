@@ -3,7 +3,7 @@ from __future__ import print_function
 
 import math
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from torch import nn
 import argparse
 import os

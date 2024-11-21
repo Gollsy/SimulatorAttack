@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import json
 import os
@@ -24,7 +24,7 @@ def set_log_file(fname):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu', type=int)
-    parser.add_argument('--config', default='/home1/machen/meta_perturbations_black_box_attack/configures/TREMBA_attack.json', help='config file')
+    parser.add_argument('--config', default='/mnt/workspace/SimulatorAttack/configures/TREMBA_attack.json', help='config file')
     parser.add_argument('--targeted',action="store_true")
     parser.add_argument('--dataset',required=True, type=str)
     parser.add_argument("--batch_size", type=int, default=20)

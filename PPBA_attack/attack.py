@@ -333,7 +333,7 @@ def get_parse_args():
     args = parser.parse_args()
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
     print("using GPU {}".format(args.gpu))
     return args
 

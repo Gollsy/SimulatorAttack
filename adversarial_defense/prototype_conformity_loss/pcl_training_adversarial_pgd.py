@@ -3,7 +3,7 @@ import datetime
 import os
 import time
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import glog as log
 import numpy as np
 import torch

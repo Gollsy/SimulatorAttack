@@ -374,7 +374,7 @@ def test_grad_cam(folder):
     resnet.cuda()
     model_dict = dict(model_type='resnet', arch=resnet, layer_name='layer4', input_size=(224, 224))
     cam = GradCAM(model_dict)
-    target_folder = "/home1/machen/test_image/"
+    target_folder = "/mnt/workspace/test_image/"
     shutil.rmtree(target_folder)
     os.makedirs(target_folder,exist_ok=True)
     all_folders = sorted(os.listdir(os.path.dirname(folder)))
@@ -402,5 +402,5 @@ def test_grad_cam(folder):
     # cv2.imwrite(target_folder + "/" + img_file_name, heatmap)
     # print("save to {}".format(target_folder + "/" + img_file_name))
 if __name__ == "__main__":
-    test_grad_cam("/home1/machen/dataset/ILSVRC2012/validation/n02119022")
+    test_grad_cam("/mnt/workspace/dataset/ILSVRC2012/validation/n02119022")
 

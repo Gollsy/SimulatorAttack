@@ -4,7 +4,7 @@ import random
 import re
 import sys
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from dataset.standard_model import StandardModel
 import glog as log
 from config import PY_ROOT, MODELS_TRAIN_STANDARD, MODELS_TEST_STANDARD

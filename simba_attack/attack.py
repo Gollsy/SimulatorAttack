@@ -329,7 +329,7 @@ def get_parse_args():
     parser.add_argument('--stride', type=int, help='stride for block order')
     parser.add_argument('--pixel_attack', action='store_true', help='attack in pixel space')
     parser.add_argument('--json-config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/SimBA_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/SimBA_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--dataset', type=str, required=True,
                         choices=['CIFAR-10', 'CIFAR-100', 'ImageNet', "FashionMNIST", "MNIST", "TinyImageNet"],

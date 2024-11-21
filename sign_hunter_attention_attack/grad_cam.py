@@ -353,7 +353,7 @@ def test_grad_cam(folders):
     resnet.cuda()
     model_dict = dict(model_type='resnet', arch=resnet, layer_name='layer4', input_size=(224, 224))
     cam = GradCAM(model_dict)
-    target_folder = "/home1/machen/test_image/"
+    target_folder = "/mnt/workspace/test_image/"
     os.makedirs(target_folder)
     for img_file_name in os.listdir(folders):
         class_id = int(img_file_name.split("_")[0])

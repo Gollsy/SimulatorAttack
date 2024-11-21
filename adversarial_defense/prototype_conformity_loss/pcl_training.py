@@ -15,7 +15,7 @@ import datetime
 # Essential Imports
 import os
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import time
 
 import glog as log

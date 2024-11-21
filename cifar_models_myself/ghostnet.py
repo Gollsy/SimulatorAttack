@@ -200,4 +200,4 @@ if __name__=='__main__':
     input = torch.randn(32,3,64,64)
     y = model(input)
     print(y)
-    torch.save(model.state_dict(), "/home1/machen/gho")
+    torch.save(model.state_dict(), "/mnt/workspace/gho")

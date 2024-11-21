@@ -2,15 +2,16 @@ IMAGE_SIZE = {"CIFAR-10":(32,32), "CIFAR-100":(32,32), "ImageNet":(224,224), "MN
               "TinyImageNet": (64,64)}
 IN_CHANNELS = {"MNIST":1, "FashionMNIST":1, "CIFAR-10":3, "ImageNet":3, "CIFAR-100":3, "SVHN":3, "TinyImageNet":3}
 CLASS_NUM = {"MNIST":10,"FashionMNIST":10, "CIFAR-10":10, "CIFAR-100":100, "ImageNet":1000, "SVHN":10, "TinyImageNet":200}
-PY_ROOT = "/home1/machen/query_based_black_box_attack"
+PY_ROOT = "/mnt/workspace/SimulatorAttack"
 
-IMAGE_DATA_ROOT = {"CIFAR-10":"/home1/machen/dataset/CIFAR-10", "CIFAR-100":"/home1/machen/dataset/CIFAR-100",
-                   'cifar10':"/home1/machen/dataset/CIFAR-10",
-                   "MNIST":"/home1/machen/dataset/MNIST",
-                   "FashionMNIST":"/home1/machen/dataset/FashionMNIST",
-                   "SVHN":"/home1/machen/dataset/SVHN",
-                   "ImageNet": "/home1/machen/dataset/ILSVRC2012/",
-                   "TinyImageNet": "/home1/machen/dataset/tinyImageNet/"}
+IMAGE_DATA_ROOT = {"CIFAR-10":"/mnt/workspace/dataset/CIFAR-10",
+                   "CIFAR-100":"/mnt/workspace/dataset/CIFAR-100",
+                   'cifar10':"/mnt/workspace/dataset/CIFAR-10",
+                   "MNIST":"/mnt/workspace/dataset/MNIST",
+                   "FashionMNIST":"/mnt/workspace/dataset/FashionMNIST",
+                   "SVHN":"/mnt/workspace/dataset/SVHN",
+                   "ImageNet": "/mnt/workspace/dataset/ILSVRC2012/",
+                   "TinyImageNet": "/Users/gollsy/PycharmProjects/dataset/tinyImageNet/"}
 
 pretrained_cifar_model_conf = {"CIFAR-10":{
                                 "vgg11_bn":None,
@@ -83,9 +84,10 @@ pretrained_cifar_model_conf = {"CIFAR-10":{
 
 IMAGENET_ALL_MODELS = ["inception_v3","pnasnet5large","senet154","inceptionv4","xception","resnet101"]
 
-MODELS_TRAIN_STANDARD = {"CIFAR-10": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
-                                      "resnext-16x64d","resnext-8x64d","vgg19_bn","resnet-20","resnet-32","resnet-44","resnet-50",
-                                          "resnet-56","resnet-110","resnet-1202"],
+# MODELS_TRAIN_STANDARD = {"CIFAR-10": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
+#                                       "resnext-16x64d","resnext-8x64d","vgg19_bn","resnet-20","resnet-32","resnet-44","resnet-50",
+#                                           "resnet-56","resnet-110","resnet-1202"],
+MODELS_TRAIN_STANDARD = {"CIFAR-10": ["alexnet", "densenet-bc-100-12"],
                          "CIFAR-100": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
                                       "resnext-16x64d","resnext-8x64d","vgg19_bn","resnet-20","resnet-32","resnet-44","resnet-50",
                                           "resnet-56","resnet-110","resnet-1202"],
@@ -103,8 +105,9 @@ MODELS_TEST_STANDARD = {"CIFAR-10": ["pyramidnet272", "gdas","WRN-28-10-drop","W
 
 
 
-MODELS_TRAIN_WITHOUT_RESNET = {"CIFAR-10": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
-                                      "resnext-16x64d","resnext-8x64d","vgg19_bn"],
+# MODELS_TRAIN_WITHOUT_RESNET = {"CIFAR-10": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
+#                                       "resnext-16x64d","resnext-8x64d","vgg19_bn"],
+MODELS_TRAIN_WITHOUT_RESNET = {"CIFAR-10": ["alexnet", "densenet-bc-100-12"],
                          "CIFAR-100": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
                                       "resnext-16x64d","resnext-8x64d","vgg19_bn"],
                          "ImageNet": ["alexnet", "bninception","densenet121", "densenet161","densenet169", "densenet201","dpn68",

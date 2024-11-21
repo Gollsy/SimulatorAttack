@@ -92,7 +92,7 @@ def get_file_name_list(dataset, method_name_to_paper, norm, targeted):
     for method, paper_method_name in method_name_to_paper.items():
         if norm == "l2" and method == "parsimonious_attack":
             continue
-        file_path = "/home1/machen/meta_perturbations_black_box_attack/logs/" + from_method_to_dir_path(dataset, method, norm, targeted)
+        file_path = "/mnt/workspace/SimulatorAttack/logs/" + from_method_to_dir_path(dataset, method, norm, targeted)
         assert os.path.exists(file_path), "{} does not exist".format(file_path)
         folder_path_dict[paper_method_name] = file_path
     return folder_path_dict

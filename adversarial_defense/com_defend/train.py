@@ -2,7 +2,7 @@ import sys
 
 from torch.optim import Adam
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from advertorch.attacks import LinfPGDAttack
 
 from adversarial_defense.com_defend.compression_network import ComDefend

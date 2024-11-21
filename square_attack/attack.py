@@ -466,7 +466,7 @@ def main():
     parser.add_argument('--epsilon', type=float,  help='Radius of the Lp ball.')
     parser.add_argument('--max_queries',type=int,default=10000)
     parser.add_argument('--json-config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/square_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/square_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--batch-size',type=int,default=100)
     parser.add_argument('--targeted', action="store_true")

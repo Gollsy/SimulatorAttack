@@ -2,7 +2,7 @@ import sys
 
 from torch.optim import Adam
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from dataset.meta_two_queries_dataset import TwoQueriesMetaTaskDataset
 import random
 from torch.utils.data import DataLoader

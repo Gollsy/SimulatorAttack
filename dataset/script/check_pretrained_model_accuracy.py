@@ -1,6 +1,6 @@
 import random
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from torchvision.datasets import CIFAR10, CIFAR100
 from torchvision.transforms import transforms
 
@@ -130,14 +130,14 @@ def construct_cifar_model(arch, dataset, num_classes):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu",type=int, required=True)
-    parser.add_argument("--dir_path",type=str,default="/home1/machen/meta_perturbations_black_box_attack/train_pytorch_model/real_image_model")
+    parser.add_argument("--dir_path",type=str,default="/mnt/workspace/SimulatorAttack/train_pytorch_model/real_image_model")
     parser.add_argument("--dataset",type=str, required=True)
     parser.add_argument('--manualSeed', type=int, help='manual seed')
     args = parser.parse_args()
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
     os.environ['CUDA_VISIBLE_DEVICE'] = str(args.gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
 
     pattern = re.compile("(.*?)@(.*?)@.*tar")
     args.dir_path = args.dir_path + "/{}-pretrained".format(args.dataset)

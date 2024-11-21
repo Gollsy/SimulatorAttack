@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import json
 
@@ -484,7 +484,7 @@ def get_parse_args():
     parser.add_argument('--target_type', type=str, default='increment', choices=['random', 'least_likely', "increment"])
     parser.add_argument('--seed', default=0, type=int, help='random seed')
     parser.add_argument('--json-config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/frank_wolfe_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/frank_wolfe_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--exp-dir', default='logs', type=str,
                         help='directory to save results and logs')

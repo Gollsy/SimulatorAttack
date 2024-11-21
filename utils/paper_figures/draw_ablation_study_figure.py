@@ -39,7 +39,7 @@ def draw_meta_predict_interval_curve_figure(ablation_key, json_key, dump_file_pa
         else:
             file_dir = "AblationStudy_{}@CIFAR-10-cw_loss-l2-untargeted-mse".format(ablation_key)
 
-        data = get_all_json_data("/home1/machen/meta_perturbations_black_box_attack/logs/" + file_dir, ablation_key)
+        data = get_all_json_data("/mnt/workspace/SimulatorAttack/logs/" + file_dir, ablation_key)
 
         x = []
         y = []
@@ -79,7 +79,7 @@ def draw_other_curve_figure(ablation_key, json_key, dump_file_path):
     for targeted in ["untargeted", "targeted"]:
         target_str = "untargeted-mse" if targeted == "untargeted" else "targeted_increment-mse"
         file_dir = "AblationStudy_{}@CIFAR-10-cw_loss-l2-{}".format(ablation_key, target_str)
-        data = get_all_json_data("/home1/machen/meta_perturbations_black_box_attack/logs/" + file_dir, ablation_key)
+        data = get_all_json_data("/mnt/workspace/SimulatorAttack/logs/" + file_dir, ablation_key)
         x = []
         y = []
         for key, json_val in sorted(data.items(), key=lambda e: int(e[0])):
@@ -120,7 +120,7 @@ def draw_other_curve_figure(ablation_key, json_key, dump_file_path):
 def draw_meta_or_not_curve_figure(dump_file_path):
     data_dict = defaultdict(dict)
     for mode in ["meta", "vanilla"]:
-        json_file_path = "/home1/machen/meta_perturbations_black_box_attack/logs/AblationStudy_meta_or_not@CIFAR-10-cw_loss-l2-untargeted-mse/meta_mode_{}_WRN-28-10-drop_result.json".format(mode)
+        json_file_path = "/mnt/workspace/SimulatorAttack/logs/AblationStudy_meta_or_not@CIFAR-10-cw_loss-l2-untargeted-mse/meta_mode_{}_WRN-28-10-drop_result.json".format(mode)
 
         with open(json_file_path, "r") as file_obj:
             data_txt = file_obj.read().replace('"not_done_loss": NaN, "not_done_prob": NaN,', "")
@@ -183,7 +183,7 @@ if __name__ == "__main__":
     args = parse_args()
     x_label = "simulator-predict interval"
     y_label = "Attack Success Rate (%)"
-    dump_folder = "/home1/machen/meta_perturbations_black_box_attack/figures/ablation_study_big_text/"
+    dump_folder = "/mnt/workspace/SimulatorAttack/figures/ablation_study_big_text/"
     os.makedirs(dump_folder, exist_ok=True)
     file_path = dump_folder + "simulator_predict_interval.pdf"
     draw_meta_predict_interval_curve_figure("meta_predict_steps", "success_rate", file_path, x_label, y_label)

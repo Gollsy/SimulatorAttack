@@ -3,7 +3,7 @@ from collections import deque, OrderedDict, defaultdict
 
 import copy
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import json
 import os
@@ -424,7 +424,7 @@ def set_log_file(fname):
 def attack_dataset(args, gpu, save_result_path, log_file_path):
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
     set_log_file(log_file_path)
     log.info("Begin attack {} on {}, result will be saved to {}".format(args.arch, args.dataset, save_result_path))
     log.info("using GPU {}".format(gpu))
@@ -459,7 +459,7 @@ if __name__ == "__main__":
                         help='\delta, parameterizes the exploration to be done around the prior')
     parser.add_argument('--tile-size', type=int, help='the side length of each tile (for the tiling prior)')
     parser.add_argument('--tiling', action='store_true')
-    parser.add_argument('--json-config', type=str, default='/home1/machen/meta_perturbations_black_box_attack/configures/meta_simulator_attack_conf.json',
+    parser.add_argument('--json-config', type=str, default='/mnt/workspace/SimulatorAttack/configures/meta_simulator_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--epsilon', type=float, help='the lp perturbation bound')
     parser.add_argument('--batch-size', type=int, help='batch size for bandits attack.')

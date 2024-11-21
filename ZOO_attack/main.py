@@ -7,8 +7,8 @@ import json
 import numpy as np
 import glog as log
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
-sys.path.append("/home/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
+sys.path.append("/home/machen/SimulatorAttack")
 import torch
 from types import SimpleNamespace
 
@@ -201,14 +201,14 @@ if __name__ == "__main__":
     parser.add_argument("--epsilone", type=float)
     parser.add_argument('--seed', default=1216, type=int, help='random seed')
     parser.add_argument('--json_config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/zoo_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/zoo_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument("--uniform", action='store_true', help="disable importance sampling")
     args = parser.parse_args()
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
     os.environ['CUDA_VISIBLE_DEVICE'] = str(args.gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
     json_conf = json.load(open(args.json_config))[args.dataset]
     args = vars(args)
     json_conf = {k: v for k, v in json_conf.items() if k not in args or args[k] is None}

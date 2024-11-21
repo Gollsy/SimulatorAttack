@@ -3,7 +3,7 @@ import glob
 import os
 import sys
 import time
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from dataset.standard_model import MetaLearnerModelBuilder
 import glog as log
 import numpy as np

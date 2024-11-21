@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import collections
 import logging
@@ -489,7 +489,7 @@ def get_args_parse():
     parser.add_argument('--arch', type=str)
     parser.add_argument('--test_archs', action='store_true')
     parser.add_argument('--json_config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/V-BAD_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/V-BAD_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--surrogate_arch',type=str,required=True, choices=['resnet50', 'resnet101', 'densenet121','densenet169'])
     parser.add_argument('--epsilon',type=float, default=0.05)
@@ -573,7 +573,7 @@ def get_model_names(args):
 
 def main():
     args = get_args_parse()
-    os.environ["TORCH_HOME"] = "/home1/machen/meta_perturbations_black_box_attack/train_pytorch_model/real_image_model/ImageNet-pretrained"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/SimulatorAttack/train_pytorch_model/real_image_model/ImageNet-pretrained"
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
     target_str = "targeted" if args.targeted else "untargeted"
     json_conf = json.load(open(args.json_config))[args.dataset][target_str][args.norm]

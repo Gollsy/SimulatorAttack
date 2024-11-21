@@ -454,7 +454,7 @@ def set_log_file(fname):
 def attack_dataset(args, gpu, save_result_path, log_file_path):
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
     set_log_file(log_file_path)
     log.info("Begin attack {} on {}, result will be saved to {}".format(args.arch, args.dataset, save_result_path))
     log.info("using GPU {}".format(gpu))

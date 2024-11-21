@@ -1,7 +1,7 @@
 import argparse
 import os
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from dataset.tiny_imagenet import TinyImageNet
 import torch
 import torchvision.transforms as transforms

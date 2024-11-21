@@ -4,7 +4,7 @@ Copyright (c) Wei YANG, 2017
 '''
 from __future__ import print_function
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import os
 import time
@@ -200,22 +200,22 @@ def main():
     ])
     if args.dataset == 'CIFAR-10':
         dataloader = datasets.CIFAR10
-        root_dir = "/home1/machen/pytorch-classification/data"
+        root_dir = "/mnt/workspace/pytorch-classification/data"
     elif args.dataset == "CIFAR-100":
         dataloader = datasets.CIFAR100
-        root_dir = "/home1/machen/pytorch-classification/data"
+        root_dir = "/mnt/workspace/pytorch-classification/data"
     elif args.dataset == "MNIST":
         dataloader = datasets.MNIST
-        root_dir = "/home1/machen/pytorch-classification/data"
+        root_dir = "/mnt/workspace/pytorch-classification/data"
     elif args.dataset == "FashionMNIST":
         dataloader = datasets.FashionMNIST
-        root_dir = "/home1/machen/pytorch-classification/data"
+        root_dir = "/mnt/workspace/pytorch-classification/data"
     elif args.dataset == "SVHN":
         dataloader = datasets.SVHN
-        root_dir = "/home1/machen/pytorch-classification/data/SVHN"
+        root_dir = "/mnt/workspace/pytorch-classification/data/SVHN"
     elif args.dataset == "TinyImageNet":
         dataloader = TinyImageNet
-        root_dir = "/home1/machen/dataset/tinyImageNet/"
+        root_dir = "/mnt/workspace/dataset/tinyImageNet/"
     num_classes = CLASS_NUM[args.dataset]
 
 

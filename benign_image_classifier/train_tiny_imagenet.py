@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from tiny_imagenet_models.resnext import resnext101_32x4d, resnext101_64x4d
 
 from config import PY_ROOT, CLASS_NUM

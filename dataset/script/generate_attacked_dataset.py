@@ -1,7 +1,7 @@
 import glob
 import os
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import torch
 import numpy as np
 import glog as log

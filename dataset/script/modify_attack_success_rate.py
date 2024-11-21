@@ -45,4 +45,4 @@ def modify_attack_success_rate(root_dir):
                         raise
 
 if __name__ == "__main__":
-    modify_attack_success_rate("/home1/machen/meta_perturbations_black_box_attack/logs")
+    modify_attack_success_rate("/mnt/workspace/SimulatorAttack/logs")

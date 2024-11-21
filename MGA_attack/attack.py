@@ -4,7 +4,7 @@ import numpy as np
 import os
 import torch
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from torch import nn
 from MGA_attack.mi_fgsm import MI_FGSM_ENS
 import argparse
@@ -320,7 +320,7 @@ if __name__ == "__main__":
     parser.add_argument('--attack_defense', action="store_true")
     parser.add_argument('--defense_model', type=str, default=None)
     parser.add_argument('--json-config', type=str,
-                        # default='/home1/machen/meta_perturbations_black_box_attack/configures/MGA_attack_conf.json',
+                        # default='/mnt/workspace/SimulatorAttack/configures/MGA_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--exp-dir', default='logs', type=str,
                         help='directory to save results and logs')

@@ -124,7 +124,7 @@ def read_json_and_extract(json_path):
 
 def get_file_name_list(target_model):
     folder_path_dict = {}
-    root_dir = "/home1/machen/query_based_black_box_attack/logs/SWITCH_cosine_gradients/"
+    root_dir = "/mnt/workspace/query_based_black_box_attack/logs/SWITCH_cosine_gradients/"
     pattern = re.compile("SWITCH_grad_cosine_stats-(.*?)-CIFAR-10-cw-loss-l2-(.*)")
     pattern_random =re.compile("SWITCH_random_grad_grad_cosine_stats-CIFAR-10-cw-loss-l2-(.*)")
     for folder in os.listdir(root_dir):

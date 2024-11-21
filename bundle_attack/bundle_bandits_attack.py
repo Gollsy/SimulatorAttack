@@ -1,6 +1,6 @@
 import glob
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import json
 import os
@@ -323,7 +323,7 @@ if __name__ == "__main__":
     parser.add_argument('--exploration', type=float, help='\delta, parameterizes the exploration to be done around the prior')
     parser.add_argument('--tile-size', type=int, help='the side length of each tile (for the tiling prior)')
     parser.add_argument('--tiling', action='store_true')
-    parser.add_argument('--json-config', type=str, default='/home1/machen/meta_perturbations_black_box_attack/configures/bandits_attack_conf.json',
+    parser.add_argument('--json-config', type=str, default='/mnt/workspace/SimulatorAttack/configures/bandits_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--epsilon', type=float, help='the lp perturbation bound')
     parser.add_argument('--batch-size', type=int, help='batch size for bandits attack.')
@@ -343,7 +343,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
-    os.environ["TORCH_HOME"] = "/home1/machen/.cache/torch/pretrainedmodels"
+    os.environ["TORCH_HOME"] = "/mnt/workspace/.cache/torch/pretrainedmodels"
     print("using GPU {}".format(args.gpu))
 
     args_dict = None

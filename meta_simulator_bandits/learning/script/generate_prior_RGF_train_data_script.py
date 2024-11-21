@@ -2,7 +2,7 @@ import random
 import sys
 from collections import defaultdict, deque
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import argparse
 import json
 import os
@@ -447,7 +447,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, required=True,
                         choices=["CIFAR-10", "CIFAR-100", "MNIST", "FashionMNIST", "TinyImageNet", "ImageNet"])
     parser.add_argument("--batch-size", type=int, default=1)
-    parser.add_argument('--json-config', default="/home1/machen/meta_perturbations_black_box_attack/configures/prior_RGF_attack_conf.json",
+    parser.add_argument('--json-config', default="/mnt/workspace/SimulatorAttack/configures/prior_RGF_attack_conf.json",
                         type=str, help='a configures file to be passed in instead of arguments')
     parser.add_argument("--surrogate_arch", type=str, help="The architecture of surrogate model,"
                                                                                  " in original paper it is resnet152")

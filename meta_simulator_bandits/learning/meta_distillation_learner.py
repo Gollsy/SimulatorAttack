@@ -2,7 +2,7 @@ import sys
 
 from torch.optim import Adam
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from dataset.meta_two_queries_dataset import TwoQueriesMetaTaskDataset
 import random
 from torch.utils.data import DataLoader
@@ -88,6 +88,7 @@ class MetaTwoQueriesLearner(object):
 
     def train(self, model_path, resume_epoch=0):
         for epoch in range(resume_epoch, self.epoch):
+            print(f"Epoch [{epoch + 1}/{self.epoch}]")
             for i, (q1_images, q2_images, q1_logits, q2_logits, *_) in enumerate(self.train_loader):
                 # q1_images shape = (Task_num, T, C, H, W)  q2_images shape = (Task_num, T, C, H, W)
                 # q1_logits shape = (Task_num, T, #class), q2_logits shape = (Task_num, T, #class)
@@ -138,6 +139,9 @@ class MetaTwoQueriesLearner(object):
                 dummy_query_targets = dummy_query_targets/torch.norm(dummy_query_targets,p=2,dim=-1,keepdim=True)
                 self.meta_update(grads, dummy_query_images, dummy_query_targets)
                 grads.clear()
+
+                if i % 10 == 0:
+                    print(f"Iteration [{i}/{len(self.train_loader)}]")
                 # if itr % 1000 == 0 and itr > 0:
                 #     torch.save({
                 #         'epoch': epoch + 1,
@@ -153,6 +157,8 @@ class MetaTwoQueriesLearner(object):
                 'optimizer': self.opt.state_dict(),
             }, model_path)
 
+            print(f"Model saved at epoch {epoch + 1}")
+
 
     def adjust_learning_rate(self,itr, meta_lr, lr_decay_itr):
         """Sets the learning rate to the initial LR decayed by 10 every 30 epochs"""
@@ -162,3 +168,4 @@ class MetaTwoQueriesLearner(object):
                 self.fast_net.step_size = self.fast_net.step_size / 10
                 for param_group in self.opt.param_groups:
                     param_group['lr'] = meta_lr
+                print(f"Learning rate adjusted to {meta_lr} at iteration {itr}")

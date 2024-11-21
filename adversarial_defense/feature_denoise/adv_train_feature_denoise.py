@@ -7,7 +7,7 @@ from torchvision.datasets import CIFAR10, CIFAR100, MNIST, FashionMNIST, ImageFo
 from torchvision.transforms import transforms
 
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from adversarial_defense.model.feature_defense_model import FeatureDefenseModel
 
 from advertorch.attacks import LinfPGDAttack

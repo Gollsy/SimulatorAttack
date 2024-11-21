@@ -2,7 +2,7 @@ import sys
 
 from torch.optim import Adam
 
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 from meta_simulator_benign_images.meta_training.image_logits_dataset import MetaTaskDataset
 from torch.utils.data import DataLoader
 from cifar_models_myself import *

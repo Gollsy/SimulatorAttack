@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import glob
 import sys
-sys.path.append("/home1/machen/meta_perturbations_black_box_attack")
+sys.path.append("/mnt/workspace/SimulatorAttack")
 import os
 import os.path as osp
 import glog as log
@@ -35,7 +35,7 @@ def parse_args():
                         help='batch size')
     parser.add_argument('--gpu', type=int, required=True)
     parser.add_argument('--json-config', type=str,
-                        default='/home1/machen/meta_perturbations_black_box_attack/configures/subspace_attack_conf.json',
+                        default='/mnt/workspace/SimulatorAttack/configures/subspace_attack_conf.json',
                         help='a configures file to be passed in instead of arguments')
     parser.add_argument('--delta-size',  type=int,
                         help='size (width/height) of delta. if not equal to image shape, we resize delta to the image'

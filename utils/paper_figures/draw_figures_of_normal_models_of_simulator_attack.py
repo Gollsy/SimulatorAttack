@@ -159,7 +159,7 @@ def from_method_to_dir_path(dataset, method, norm, targeted):
     return path
 
 def get_all_exists_folder(dataset, methods, norm, targeted):
-    root_dir = "/home1/machen/meta_perturbations_black_box_attack/logs/"
+    root_dir = "/mnt/workspace/SimulatorAttack/logs/"
     dataset_path_dict = {}  # dataset_path_dict {("CIFAR-10","l2","untargeted", "NES"): "/.../"， }
     for method in methods:
         file_name = from_method_to_dir_path(dataset, method, norm, targeted)
@@ -388,7 +388,7 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    dump_folder = "/home1/machen/meta_perturbations_black_box_attack/figures_without_font_embed/{}/".format(args.fig_type)
+    dump_folder = "/mnt/workspace/SimulatorAttack/figures_without_font_embed/{}/".format(args.fig_type)
     os.makedirs(dump_folder, exist_ok=True)
 
     if "CIFAR" in args.dataset:
