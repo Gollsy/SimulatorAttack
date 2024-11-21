@@ -87,7 +87,7 @@ IMAGENET_ALL_MODELS = ["inception_v3","pnasnet5large","senet154","inceptionv4","
 # MODELS_TRAIN_STANDARD = {"CIFAR-10": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
 #                                       "resnext-16x64d","resnext-8x64d","vgg19_bn","resnet-20","resnet-32","resnet-44","resnet-50",
 #                                           "resnet-56","resnet-110","resnet-1202"],
-MODELS_TRAIN_STANDARD = {"CIFAR-10": ["alexnet", "densenet-bc-100-12"],
+MODELS_TRAIN_STANDARD = {"CIFAR-10": ["alexnet"],
                          "CIFAR-100": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
                                       "resnext-16x64d","resnext-8x64d","vgg19_bn","resnet-20","resnet-32","resnet-44","resnet-50",
                                           "resnet-56","resnet-110","resnet-1202"],
@@ -107,7 +107,7 @@ MODELS_TEST_STANDARD = {"CIFAR-10": ["pyramidnet272", "gdas","WRN-28-10-drop","W
 
 # MODELS_TRAIN_WITHOUT_RESNET = {"CIFAR-10": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
 #                                       "resnext-16x64d","resnext-8x64d","vgg19_bn"],
-MODELS_TRAIN_WITHOUT_RESNET = {"CIFAR-10": ["alexnet", "densenet-bc-100-12"],
+MODELS_TRAIN_WITHOUT_RESNET = {"CIFAR-10": ["alexnet"],
                          "CIFAR-100": ["alexnet", "densenet-bc-100-12", "densenet-bc-L190-k40",  "preresnet-110",
                                       "resnext-16x64d","resnext-8x64d","vgg19_bn"],
                          "ImageNet": ["alexnet", "bninception","densenet121", "densenet161","densenet169", "densenet201","dpn68",
